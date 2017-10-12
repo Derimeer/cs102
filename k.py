@@ -1,7 +1,13 @@
 def decrypt_caesar(ciphertext):
-	"""
- 	>>> decrypt_caesar("sbwkrq")
-    'python'
+    """
+    >>> encrypt_caesar("PYTHON")
+    'SBWKRQ'
+    >>> encrypt_caesar("python")
+    'sbwkrq'
+    >>> encrypt_caesar("Python3.6")
+    'Sbwkrq3.6'
+    >>> encrypt_caesar("")
+    ''
     """
 	plaintext = ""
 	for c in ciphertext:
@@ -26,8 +32,14 @@ def decrypt_caesar(ciphertext):
 
 def encrypt_caesar(plaintext):
 	"""
-	>>> encrypt_caesar("python")
-	'sbwkrq'
+    >>> decrypt_caesar("SBWKRQ")
+    'PYTHON'
+    >>> decrypt_caesar("sbwkrq")
+    'python'
+    >>> decrypt_caesar("Sbwkrq3.6")
+    'Python3.6'
+    >>> decrypt_caesar("")
+    ''
 	"""
 	ciphertext = ""
 	for c in plaintext:
